@@ -83,7 +83,6 @@
             </div>
         </div>
     </section>
-    
 
     <section id="portfolio">
         <div class="container">
@@ -100,7 +99,7 @@
                     <img src="images/Sekolah.jpg" alt="Sekolah">
                     <div class="portfolio-info">
                         <h3>Sistem Manajemen Sekolah</h3>
-                        <p><p>Sebuah sistem manajemen sekolah yang membantu dalam mengelola data siswa, guru, dan kurikulum. Dibuat menggunakan React dan Node.js.</p></p>
+                        <p>Sebuah sistem manajemen sekolah yang membantu dalam mengelola data siswa, guru, dan kurikulum. Dibuat menggunakan React dan Node.js.</p>
                     </div>
                 </div>
                 <div class="portfolio-item">
@@ -113,7 +112,7 @@
                 <div class="portfolio-item">
                     <img src="images/lapor.jpg" alt="lapor">
                     <div class="portfolio-info">
-                        <h3> Website Portofolio</h3>
+                        <h3>Website Portofolio</h3>
                         <p>Sebuah website portofolio pribadi yang menampilkan karya dan proyek-proyek yang telah saya kerjakan. Dibuat dengan HTML, CSS, dan JavaScript.</p>
                     </div>
                 </div>
@@ -139,6 +138,23 @@
                 </div>
                 <button type="submit" class="btn">Kirim</button>
             </form>
+            <div class="like-section">
+                <button class="like-btn" onclick="likePage()"><span class="heart">&#9829;</span> Sukai Halaman</button>
+                <p id="like-count">3420 Suka</p>
+            </div>
+            <section id="contact-info">
+                <h2>Informasi Kontak</h2>
+                <ul>
+                    <li class="info-item">
+                        <img src="images/telepon.jpg" alt="Phone Icon" class="info-logo">
+                        <p>Telepon: 081397306105</p>
+                    </li>
+                    <li class="info-item">
+                        <img src="images/intagram.jpg" alt="Instagram Icon" class="info-logo">
+                        <p>Instagram: <a href="https://www.instagram.com/irwansirait01" target="_blank">@irwansirait01</a></p>
+                    </li>
+                </ul>
+            </section>
         </div>
     </section>
 
@@ -148,6 +164,12 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        let likeCount = 3420;
+        function likePage() {
+            likeCount++;
+            document.getElementById('like-count').textContent = `${likeCount} Suka`;
+        }
+    </script>
 </body>
 </html>
