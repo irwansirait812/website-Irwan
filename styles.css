@@ -1,202 +1,147 @@
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f5f5f5;
-}
-
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 20px 0;
-}
-
-header .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-header h1 {
-    margin: 0;
-    font-size: 24px;
-}
-
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-}
-
-nav ul li {
-    margin-left: 20px;
-}
-
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 16px;
-}
-
-nav ul li a:hover {
-    text-decoration: underline;
-}
-
-section {
-    padding: 60px 0;
 }
 
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 20px;
 }
 
-.welcome-box {
-    background-color: #28292a3d; /* Warna latar belakang */
-    color: #e6eff1; /* Warna teks */
-    padding: 1px; /* Padding di dalam kotak */
-    border-radius: 100px; /* Membuat sudut kotak melengkung */
-    text-align: center; /* Pusatkan teks */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+
+header h1 {
+    margin: 0;
+    text-align: center;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+}
+
+nav li {
+    margin: 0 15px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
 }
 
 #hero {
-    background: url('images/pekerja-digital.jpg') no-repeat center center/cover;
-    color: #fff;
+    background-color: #f4f4f4;
+    padding: 50px 0;
     text-align: center;
-    padding: 100px 0;
 }
 
-#hero h2 {
-    font-size: 36px;
-    margin-bottom: 10px;
-}
-
-#hero p {
-    font-size: 18px;
-    margin-bottom: 20px;
-}
-
-.btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #007bff;
+#hero .btn {
+    background-color: #333;
     color: #fff;
+    padding: 10px 20px;
     text-decoration: none;
-    border-radius: 5px;
-}
-
-.btn:hover {
-    background-color: #0056b3;
 }
 
 .profile {
     display: flex;
     align-items: center;
-}
-
-.profile img {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    margin-right: 20px;
-}
-
-.bio p {
-    font-size: 16px;
-    color: #666;
-}
-
-.skills-list {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
 }
 
+.profile img {
+    border-radius: 50%;
+    max-width: 150px;
+}
+
+.bio {
+    flex: 1;
+}
+
+.skills-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
 .skill {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    flex: 1 1 30%;
+    margin: 10px;
 }
 
 .skill h3 {
-    margin: 0 0 10px;
-    font-size: 18px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.skill-logo {
+    width: 24px;
+    height: 24px;
 }
 
 .progress-bar {
-    background-color: #f2f2f2;
+    background-color: #e0e0e0;
     border-radius: 5px;
     overflow: hidden;
+    margin-top: 10px;
 }
 
 .progress {
+    background-color: #333;
     height: 10px;
-    background-color: #007bff;
     border-radius: 5px;
 }
 
 .portfolio-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 .portfolio-item {
-    position: relative;
-    overflow: hidden;
+    flex: 1 1 45%;
+    margin: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
 }
 
 .portfolio-item img {
-    width: 100%;
+    max-width: 100%;
     height: auto;
 }
 
 .portfolio-info {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: rgba(0, 0, 0, 0.7);
-    color: #fff;
     padding: 20px;
-    opacity: 0;
-    transition: opacity 0.3s ease;
 }
 
-.portfolio-item:hover .portfolio-info {
-    opacity: 1;
-}
-
-form {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+#contactForm {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .form-group {
-    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
 }
 
-.form-group label {
-    display: block;
-    margin-bottom: 5px;
-    font-size: 14px;
-    color: #333;
-}
-
-.form-group input,
-.form-group textarea {
-    width: 100%;
+.btn {
+    background-color: #333;
+    color: #fff;
     padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
 }
 
 footer {
@@ -204,14 +149,70 @@ footer {
     color: #fff;
     text-align: center;
     padding: 20px 0;
-    margin-top: 20px;
 }
 
-.skill-logo {
-    width: 40px;
-    height: 40px;
-    margin-right: 0px;
-    vertical-align: middle;
+/* Media query untuk layar dengan lebar maksimum 768px (tablet dan hp) */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profile {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .skills-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .portfolio-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .portfolio-item {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
 }
 
+/* Media query untuk layar dengan lebar maksimum 480px (hp) */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 24px;
+    }
 
+    nav li {
+        margin: 10px 0;
+    }
+
+    .skills-list .skill {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .skills-list .skill h3 {
+        font-size: 18px;
+    }
+
+    .progress-bar {
+        height: 20px;
+    }
+
+    .portfolio-item img {
+        width: 100%;
+    }
+
+    .form-group {
+        width: 100%;
+    }
+
+    .btn {
+        width: 100%;
+        padding: 15px;
+        font-size: 18px;
+    }
+}
