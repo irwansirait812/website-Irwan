@@ -1,147 +1,207 @@
+/* Reset dasar */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+    background-color: #f5f5f5;
 }
 
 header {
     background-color: #333;
     color: #fff;
-    padding: 10px 0;
+    padding: 20px 0;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 header h1 {
     margin: 0;
-    text-align: center;
+    font-size: 24px;
 }
 
 nav ul {
-    display: flex;
-    justify-content: center;
-    list-style-type: none;
+    list-style: none;
+    margin: 0;
     padding: 0;
+    display: flex;
 }
 
-nav li {
-    margin: 0 15px;
+nav ul li {
+    margin-left: 20px;
 }
 
-nav a {
+nav ul li a {
     color: #fff;
     text-decoration: none;
+    font-size: 16px;
 }
 
-#hero {
-    background-color: #f4f4f4;
-    padding: 50px 0;
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+section {
+    padding: 60px 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.welcome-box {
+    background-color: #28292a3d;
+    color: #e6eff1;
+    padding: 20px;
+    border-radius: 10px;
     text-align: center;
 }
 
-#hero .btn {
-    background-color: #333;
+#hero {
+    background: url('images/pekerja-digital.jpg') no-repeat center center/cover;
     color: #fff;
+    text-align: center;
+    padding: 100px 0;
+}
+
+#hero h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+#hero p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.btn {
+    display: inline-block;
     padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
     text-decoration: none;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background-color: #0056b3;
 }
 
 .profile {
     display: flex;
     align-items: center;
-    gap: 20px;
-}
-
-.profile img {
-    border-radius: 50%;
-    max-width: 150px;
-}
-
-.bio {
-    flex: 1;
-}
-
-.skills-list {
-    display: flex;
-    justify-content: space-around;
     flex-wrap: wrap;
 }
 
+.profile img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.bio p {
+    font-size: 16px;
+    color: #666;
+    text-align: justify;
+}
+
+.skills-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
 .skill {
-    flex: 1 1 30%;
-    margin: 10px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .skill h3 {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.skill-logo {
-    width: 24px;
-    height: 24px;
+    margin: 0 0 10px;
+    font-size: 18px;
 }
 
 .progress-bar {
-    background-color: #e0e0e0;
+    background-color: #f2f2f2;
     border-radius: 5px;
     overflow: hidden;
-    margin-top: 10px;
 }
 
 .progress {
-    background-color: #333;
     height: 10px;
+    background-color: #007bff;
     border-radius: 5px;
 }
 
 .portfolio-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
 }
 
 .portfolio-item {
-    flex: 1 1 45%;
-    margin: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
+    position: relative;
     overflow: hidden;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .portfolio-item img {
-    max-width: 100%;
+    width: 100%;
     height: auto;
 }
 
 .portfolio-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
     padding: 20px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    text-align: justify;
 }
 
-#contactForm {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+.portfolio-item:hover .portfolio-info {
+    opacity: 1;
+}
+
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .form-group {
-    display: flex;
-    flex-direction: column;
+    margin-bottom: 20px;
 }
 
-.btn {
-    background-color: #333;
-    color: #fff;
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #333;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
     padding: 10px;
-    text-align: center;
-    text-decoration: none;
-    border: none;
-    cursor: pointer;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
 }
 
 footer {
@@ -149,13 +209,90 @@ footer {
     color: #fff;
     text-align: center;
     padding: 20px 0;
+    margin-top: 20px;
 }
 
-/* Media query untuk layar dengan lebar maksimum 768px (tablet dan hp) */
+.skill-logo {
+    width: 40px;
+    height: 40px;
+    margin-right: 0px;
+    vertical-align: middle;
+}
+
+.like-section {
+    margin-top: 40px; /* Adjust this value as needed */
+    text-align: center;
+}
+
+.like-btn {
+    background: none;
+    border: none;
+    color: red;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.heart {
+    font-size: 36px;
+    color: red;
+}
+
+#contact-info {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 40px; /* Adjust this value as needed */
+}
+
+#contact-info h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#contact-info ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.info-logo {
+    width: 30px;
+    height: 30px;
+}
+
+/* Responsif untuk perangkat dengan layar kecil */
 @media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
     nav ul {
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
+    }
+
+    nav ul li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    .skills-list {
+        grid-template-columns: 1fr;
+    }
+
+    .portfolio-grid {
+        grid-template-columns: 1fr;
     }
 
     .profile {
@@ -163,56 +300,43 @@ footer {
         align-items: center;
     }
 
-    .skills-list {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .portfolio-grid {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .portfolio-item {
-        max-width: 100%;
+    .profile img {
+        margin-right: 0;
         margin-bottom: 20px;
-    }
-}
-
-/* Media query untuk layar dengan lebar maksimum 480px (hp) */
-@media (max-width: 480px) {
-    header h1 {
-        font-size: 24px;
-    }
-
-    nav li {
-        margin: 10px 0;
-    }
-
-    .skills-list .skill {
-        width: 100%;
-        margin-bottom: 20px;
-    }
-
-    .skills-list .skill h3 {
-        font-size: 18px;
-    }
-
-    .progress-bar {
-        height: 20px;
-    }
-
-    .portfolio-item img {
-        width: 100%;
-    }
-
-    .form-group {
-        width: 100%;
     }
 
     .btn {
         width: 100%;
-        padding: 15px;
-        font-size: 18px;
+        text-align: center;
+    }
+}
+
+/* Responsif untuk perangkat dengan layar sangat kecil, seperti ponsel */
+@media (max-width: 480px) {
+    #hero h2 {
+        font-size: 28px;
+    }
+
+    #hero p {
+        font-size: 16px;
+    }
+
+    .btn {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+
+    .form-group label {
+        font-size: 12px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        font-size: 14px;
+    }
+
+    .welcome-box {
+        padding: 10px;
+        font-size: 14px;
     }
 }
